@@ -1,0 +1,1978 @@
+/* ========================= */
+/* BASIC RESET */
+/* ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ========================= */
+/* BODY */
+/* ========================= */
+
+body {
+    min-height: 100vh;
+    font-family: Georgia, "Times New Roman", serif;
+    overflow-x: hidden;
+}
+
+
+/* ========================= */
+/* IMPORTANT HIDDEN CLASS */
+/* ========================= */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* ========================= */
+/* PASSCODE SCREEN */
+/* ========================= */
+
+#passcode-screen {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    background: #dcecf3;
+}
+
+
+/* Passcode heading */
+
+#passcode-screen h1 {
+    font-size: 22px;
+
+    letter-spacing: 2px;
+
+    color: #173f5f;
+
+    margin-bottom: 5px;
+}
+
+
+/* ========================= */
+/* TEMPORARY PHOTO */
+/* ========================= */
+
+.photo-placeholder {
+    width: 150px;
+    height: 180px;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+    transform: rotate(-4deg);
+
+    color: #7c9aaa;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+
+/* ========================= */
+/* PASSWORD DOTS */
+/* ========================= */
+
+#password-dots {
+    display: flex;
+
+    gap: 14px;
+
+    font-size: 24px;
+
+    color: #173f5f;
+
+    margin-top: 5px;
+}
+
+
+/* ========================= */
+/* KEYPAD */
+/* ========================= */
+
+.keypad {
+    display: grid;
+
+    grid-template-columns: repeat(3, 55px);
+
+    gap: 12px;
+
+    margin-top: 5px;
+}
+
+
+.key {
+    width: 55px;
+    height: 55px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #2878b5;
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.key:hover {
+    transform: scale(1.08);
+
+    background: #185f93;
+}
+
+
+.key:active {
+    transform: scale(0.95);
+}
+
+
+/* ========================= */
+/* GUESS WHAT SCREEN */
+/* ========================= */
+
+#surprise-screen {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: #dcecf3;
+}
+
+
+.surprise-content {
+    animation: fadeIn 1.5s ease;
+}
+
+
+.small-text {
+    font-size: 22px;
+
+    color: #173f5f;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+}
+
+
+.surprise-content h2 {
+    font-size: 42px;
+
+    font-weight: normal;
+
+    color: #173f5f;
+
+    margin-bottom: 35px;
+}
+
+
+/* OPEN BUTTON */
+
+#open-button {
+    border: none;
+
+    background: #2878b5;
+
+    color: white;
+
+    padding: 14px 30px;
+
+    border-radius: 30px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+#open-button:hover {
+    transform: scale(1.08);
+}
+
+
+/* ========================= */
+/* BIRTHDAY SCREEN */
+/* ========================= */
+
+#birthday-screen {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: #f4e9df;
+}
+
+
+.birthday-content {
+    animation: birthdayFade 1.5s ease;
+
+    padding: 30px;
+}
+
+
+/* Small heading */
+
+.birthday-small {
+    font-size: 14px;
+
+    letter-spacing: 3px;
+
+    color: #8b5e58;
+
+    margin-bottom: 18px;
+}
+
+
+/* Main birthday heading */
+
+.birthday-content h1 {
+    font-size: 48px;
+
+    color: #6d3f46;
+
+    margin-bottom: 5px;
+}
+
+
+/* My World */
+
+.birthday-content h2 {
+    font-size: 38px;
+
+    color: #8b5e58;
+
+    margin-bottom: 25px;
+}
+
+
+/* ========================= */
+/* BIRTHDAY PHOTO */
+/* ========================= */
+
+.birthday-photo {
+    width: 210px;
+    height: 250px;
+
+    margin: 0 auto 20px;
+
+    padding: 10px;
+
+    background: white;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+    transform: rotate(-3deg);
+}
+
+
+.birthday-photo-placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: #ead8d0;
+
+    color: #8b5e58;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+}
+
+
+/* ========================= */
+/* NAME */
+/* ========================= */
+
+.birthday-content h3 {
+    font-size: 25px;
+
+    color: #6d3f46;
+
+    margin-bottom: 12px;
+}
+
+
+/* ========================= */
+/* SPECIAL MESSAGE */
+/* ========================= */
+
+.special-message {
+    max-width: 450px;
+
+    margin: 0 auto 25px;
+
+    line-height: 1.7;
+
+    color: #624b4b;
+
+    font-size: 17px;
+}
+
+
+/* ========================= */
+/* LETTER BUTTON */
+/* ========================= */
+
+#letter-button {
+    border: none;
+
+    background: #8b5e58;
+
+    color: white;
+
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+#letter-button:hover {
+    transform: scale(1.08);
+}
+
+
+/* ========================= */
+/* ANIMATIONS */
+/* ========================= */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes birthdayFade {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+/* ========================= */
+/* LETTER SCREEN */
+/* ========================= */
+
+#letter-screen {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: #f5eee5;
+
+    padding: 40px 20px;
+}
+
+
+.letter-content {
+    width: 100%;
+    max-width: 700px;
+
+    animation: letterFade 1.5s ease;
+}
+
+
+.letter-small {
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    color: #8b5e58;
+
+    margin-bottom: 12px;
+}
+
+
+.letter-content h1 {
+    font-size: 42px;
+
+    font-weight: normal;
+
+    color: #6d3f46;
+
+    margin-bottom: 30px;
+}
+
+
+/* ========================= */
+/* LETTER PAPER */
+/* ========================= */
+
+.letter-paper {
+    background: #fffdf8;
+
+    max-width: 620px;
+
+    margin: 0 auto 30px;
+
+    padding: 45px 50px;
+
+    text-align: left;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+
+    border-radius: 3px;
+
+    transform: rotate(-1deg);
+}
+
+
+.letter-paper h2 {
+    font-size: 25px;
+
+    font-weight: normal;
+
+    color: #6d3f46;
+
+    margin-bottom: 25px;
+}
+
+
+.letter-paper p {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    color: #594646;
+
+    margin-bottom: 20px;
+}
+
+
+.letter-ending {
+    text-align: right;
+
+    margin-top: 30px;
+
+    color: #6d3f46 !important;
+}
+
+
+/* ========================= */
+/* MEMORIES BUTTON */
+/* ========================= */
+
+#memories-button {
+    border: none;
+
+    background: #8b5e58;
+
+    color: white;
+
+    padding: 14px 28px;
+
+    border-radius: 30px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+#memories-button:hover {
+    transform: scale(1.08);
+}
+
+
+/* ========================= */
+/* LETTER ANIMATION */
+/* ========================= */
+
+@keyframes letterFade {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+/* ========================= */
+/* MEMORIES SCREEN */
+/* ========================= */
+
+#memories-screen {
+    min-height: 100vh;
+
+    padding: 60px 25px;
+
+    background: #f4e9df;
+
+    text-align: center;
+}
+
+
+.memories-content {
+    max-width: 900px;
+
+    margin: auto;
+
+    animation: memoriesFade 1.5s ease;
+}
+
+
+.memories-small {
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    color: #8b5e58;
+
+    margin-bottom: 12px;
+}
+
+
+.memories-content h1 {
+    font-size: 44px;
+
+    font-weight: normal;
+
+    color: #6d3f46;
+
+    margin-bottom: 15px;
+}
+
+
+.memories-intro {
+    max-width: 550px;
+
+    margin: 0 auto 40px;
+
+    line-height: 1.7;
+
+    color: #624b4b;
+
+    font-size: 16px;
+}
+
+
+/* ========================= */
+/* MEMORY CARDS */
+/* ========================= */
+
+.memory-card {
+    display: inline-block;
+
+    vertical-align: top;
+
+    width: 220px;
+
+    margin: 15px;
+
+    padding: 12px;
+
+    background: white;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+
+    transition: 0.3s;
+}
+
+
+.memory-card:nth-child(odd) {
+    transform: rotate(-3deg);
+}
+
+
+.memory-card:nth-child(even) {
+    transform: rotate(3deg);
+}
+
+
+.memory-card:hover {
+    transform: rotate(0deg) scale(1.05);
+}
+
+
+/* ========================= */
+/* TEMPORARY PHOTO */
+/* ========================= */
+
+.memory-photo {
+    height: 220px;
+
+    background: #ead8d0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #8b5e58;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+
+.memory-card p {
+    color: #624b4b;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    padding: 5px;
+}
+
+
+/* ========================= */
+/* LOVE BUTTON */
+/* ========================= */
+
+#love-button {
+    display: block;
+
+    margin: 40px auto 0;
+
+    border: none;
+
+    background: #8b5e58;
+
+    color: white;
+
+    padding: 14px 28px;
+
+    border-radius: 30px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+#love-button:hover {
+    transform: scale(1.08);
+}
+
+
+/* ========================= */
+/* ANIMATION */
+/* ========================= */
+
+@keyframes memoriesFade {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+/* ========================= */
+/* THINGS I LOVE */
+/* ========================= */
+
+#love-screen {
+    min-height: 100vh;
+
+    padding: 60px 25px;
+
+    background: #f8eee9;
+
+    text-align: center;
+}
+
+
+.love-content {
+    max-width: 1000px;
+
+    margin: auto;
+
+    animation: loveFade 1.5s ease;
+}
+
+
+.love-small {
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    color: #8b5e58;
+
+    margin-bottom: 12px;
+}
+
+
+.love-content h1 {
+    font-size: 44px;
+
+    font-weight: normal;
+
+    color: #6d3f46;
+
+    margin-bottom: 45px;
+}
+
+
+/* ========================= */
+/* PHOTO + CARDS */
+/* ========================= */
+
+.love-layout {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 60px;
+
+    flex-wrap: wrap;
+}
+
+
+/* ========================= */
+/* PHOTO */
+/* ========================= */
+
+.love-photo {
+    width: 260px;
+    height: 320px;
+
+    background: #ead8d0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #8b5e58;
+
+    letter-spacing: 2px;
+
+    font-size: 13px;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+
+    transform: rotate(-4deg);
+}
+
+
+/* ========================= */
+/* LOVE LIST */
+/* ========================= */
+
+.love-list {
+    width: 380px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.love-card {
+    background: #fffdf8;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 16px 20px;
+
+    text-align: left;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+    border-radius: 5px;
+
+    transition: 0.3s;
+}
+
+
+.love-card:hover {
+    transform: translateX(8px);
+}
+
+
+.love-card span {
+    font-size: 22px;
+
+    color: #a45c68;
+}
+
+
+.love-card p {
+    font-size: 16px;
+
+    color: #624b4b;
+}
+
+
+/* ========================= */
+/* PERSONAL THOUGHT */
+/* ========================= */
+
+.love-thought {
+    max-width: 600px;
+
+    margin: 55px auto 35px;
+
+    padding: 25px;
+}
+
+
+.love-thought p {
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: #624b4b;
+}
+
+
+.love-thought h2 {
+    margin-top: 12px;
+
+    font-size: 28px;
+
+    font-weight: normal;
+
+    color: #8b5e58;
+}
+
+
+/* ========================= */
+/* FUTURE BUTTON */
+/* ========================= */
+
+#future-button {
+    border: none;
+
+    background: #8b5e58;
+
+    color: white;
+
+    padding: 14px 28px;
+
+    border-radius: 30px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+#future-button:hover {
+    transform: scale(1.08);
+}
+
+
+/* ========================= */
+/* ANIMATION */
+/* ========================= */
+
+@keyframes loveFade {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+/* ========================= */
+/* OUR FUTURE */
+/* ========================= */
+
+#future-screen {
+    min-height: 100vh;
+
+    padding: 60px 25px;
+
+    background: #eee8f4;
+
+    text-align: center;
+}
+
+
+.future-content {
+    max-width: 750px;
+
+    margin: auto;
+
+    animation: futureFade 1.5s ease;
+}
+
+
+.future-small {
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    color: #75627d;
+
+    margin-bottom: 12px;
+}
+
+
+.future-content h1 {
+    font-size: 46px;
+
+    font-weight: normal;
+
+    color: #594461;
+
+    margin-bottom: 30px;
+}
+
+
+/* ========================= */
+/* FUTURE PHOTO */
+/* ========================= */
+
+.future-photo {
+    width: 220px;
+    height: 270px;
+
+    margin: 0 auto 35px;
+
+    background: #ddd2e5;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #75627d;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+
+    transform: rotate(3deg);
+}
+
+
+/* ========================= */
+/* FUTURE MESSAGE */
+/* ========================= */
+
+.future-message {
+    max-width: 650px;
+
+    margin: auto;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    padding: 35px 40px;
+
+    border-radius: 5px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+.future-message p {
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    color: #594c59;
+
+    margin-bottom: 20px;
+}
+
+
+.future-message h2 {
+    font-size: 25px;
+
+    font-weight: normal;
+
+    line-height: 1.5;
+
+    color: #75627d;
+
+    margin-top: 25px;
+}
+
+
+/* ========================= */
+/* FINAL BUTTON */
+/* ========================= */
+
+#final-button {
+    margin-top: 35px;
+
+    border: none;
+
+    background: #75627d;
+
+    color: white;
+
+    padding: 14px 28px;
+
+    border-radius: 30px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+#final-button:hover {
+    transform: scale(1.08);
+}
+
+
+/* ========================= */
+/* ANIMATION */
+/* ========================= */
+
+@keyframes futureFade {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+/* ========================= */
+/* FINAL SCREEN */
+/* ========================= */
+
+#final-screen {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px 25px;
+
+    background: #e9e1eb;
+}
+
+
+.final-content {
+    max-width: 700px;
+
+    animation: finalFade 2s ease;
+}
+
+
+.final-small {
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    color: #75627d;
+
+    margin-bottom: 15px;
+}
+
+
+.final-content h1 {
+    font-size: 48px;
+
+    font-weight: normal;
+
+    color: #594461;
+
+    margin-bottom: 20px;
+}
+
+
+/* ========================= */
+/* HEART */
+/* ========================= */
+
+.final-heart {
+    font-size: 65px;
+
+    color: #8b5e78;
+
+    margin-bottom: 25px;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+
+/* ========================= */
+/* FINAL MESSAGE */
+/* ========================= */
+
+.final-message {
+    max-width: 600px;
+
+    margin: auto;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    padding: 35px 40px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+    border-radius: 5px;
+}
+
+
+.final-message p {
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    color: #594c59;
+
+    margin-bottom: 20px;
+}
+
+
+.final-message h2 {
+    font-size: 27px;
+
+    font-weight: normal;
+
+    color: #75627d;
+
+    margin: 25px 0;
+}
+
+
+.final-message .forever {
+    font-size: 15px;
+
+    font-style: italic;
+}
+
+
+/* ========================= */
+/* SIGNATURE */
+/* ========================= */
+
+.signature {
+    margin-top: 30px;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: #594461;
+}
+
+
+/* ========================= */
+/* ANIMATIONS */
+/* ========================= */
+
+@keyframes finalFade {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes heartbeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.15);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.15);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
+}
+/* ========================= */
+/* PERSONAL LETTER SCREEN */
+/* ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+#personal-letter-screen {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+
+    overflow: hidden;
+
+    background: #f5eee5;
+}
+
+
+/* ========================= */
+/* LEFT — PHOTO 45% */
+/* ========================= */
+
+.letter-photo-side {
+    width: 45%;
+    height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+
+    position: relative;
+}
+
+
+/* Photo frame */
+
+.letter-photo-frame {
+    width: min(420px, 80%);
+
+    aspect-ratio: 4 / 5;
+
+    background: white;
+
+    padding: 12px;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.15);
+
+    transform: rotate(-3deg);
+}
+
+
+/* Temporary photo */
+
+.letter-photo-placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #ead8d0;
+
+    color: #8b5e58;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+}
+
+
+.photo-caption {
+    margin-top: 25px;
+
+    color: #8b5e58;
+
+    font-size: 15px;
+
+    font-style: italic;
+}
+
+
+/* ========================= */
+/* MIDDLE — 5% SPACE */
+/* ========================= */
+
+#personal-letter-screen::after {
+    content: "";
+
+    width: 5%;
+
+    height: 100vh;
+
+    background: #f5eee5;
+}
+
+
+/* ========================= */
+/* RIGHT — LETTER 50% */
+/* ========================= */
+
+.letter-scroll-side {
+    width: 50%;
+    height: 100vh;
+
+    overflow-y: auto;
+
+    padding: 60px 45px;
+
+    background: #fffdf8;
+}
+
+
+/* ========================= */
+/* SCROLLBAR */
+/* ========================= */
+
+.letter-scroll-side::-webkit-scrollbar {
+    width: 7px;
+}
+
+
+.letter-scroll-side::-webkit-scrollbar-thumb {
+    background: #c5a5a0;
+
+    border-radius: 10px;
+}
+
+
+.letter-scroll-side::-webkit-scrollbar-track {
+    background: #eee5df;
+}
+
+
+/* ========================= */
+/* LETTER CONTENT */
+/* ========================= */
+
+.letter-scroll-content {
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    animation: letterAppear 1.5s ease;
+}
+
+
+.letter-heading {
+    text-align: center;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    color: #8b5e58;
+
+    margin-bottom: 35px;
+}
+
+
+.letter-scroll-content h1 {
+    font-family:
+        "Brush Script MT",
+        "Segoe Script",
+        cursive;
+
+    font-size: 38px;
+
+    font-weight: normal;
+
+    color: #6d3f46;
+
+    margin-bottom: 25px;
+}
+
+
+/* ========================= */
+/* LETTER TEXT */
+/* ========================= */
+
+.letter-scroll-content > p:not(.letter-heading) {
+    font-family:
+        "Segoe Script",
+        "Brush Script MT",
+        cursive;
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    color: #4f4141;
+
+    margin-bottom: 28px;
+}
+
+
+/* ========================= */
+/* BIRTHDAY ENDING */
+/* ========================= */
+
+.birthday-ending {
+    text-align: center;
+
+    margin-top: 50px;
+
+    padding-top: 35px;
+
+    border-top: 1px solid #d9c7c1;
+}
+
+
+.birthday-ending h2 {
+    font-family:
+        "Segoe Script",
+        "Brush Script MT",
+        cursive;
+
+    font-size: 25px;
+
+    line-height: 1.5;
+
+    color: #8b5e58;
+
+    margin-bottom: 12px;
+}
+
+
+.birthday-ending h3 {
+    font-size: 21px;
+
+    color: #6d3f46;
+
+    margin-bottom: 25px;
+}
+
+
+.birthday-ending p {
+    font-family:
+        "Segoe Script",
+        "Brush Script MT",
+        cursive;
+
+    font-size: 17px;
+
+    color: #594646;
+
+    line-height: 1.8;
+}
+
+
+.birthday-ending .signature {
+    margin-top: 35px;
+
+    font-size: 18px;
+
+    color: #6d3f46;
+}
+
+
+/* ========================= */
+/* ANIMATION */
+/* ========================= */
+
+@keyframes letterAppear {
+
+    from {
+        opacity: 0;
+
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateX(0);
+    }
+
+}
+
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    #personal-letter-screen {
+        flex-direction: column;
+
+        height: auto;
+
+        min-height: 100vh;
+
+        overflow: visible;
+    }
+
+
+    .letter-photo-side {
+        width: 100%;
+
+        height: 50vh;
+
+        min-height: 380px;
+
+        padding: 30px;
+    }
+
+
+    .letter-photo-frame {
+        width: 230px;
+
+        height: 300px;
+    }
+
+
+    #personal-letter-screen::after {
+        display: none;
+    }
+
+
+    .letter-scroll-side {
+        width: 100%;
+
+        height: 65vh;
+
+        max-height: 65vh;
+
+        overflow-y: auto;
+
+        padding: 45px 25px;
+    }
+
+
+    .letter-scroll-content > p:not(.letter-heading) {
+        font-size: 17px;
+
+        line-height: 1.8;
+    }
+
+}
+/* ========================= */
+/* ULTIMATE FINAL PAGE */
+/* ========================= */
+
+#ultimate-final-screen {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: #f5eee5;
+
+    padding: 30px;
+}
+
+
+.ultimate-final-content {
+    width: 100%;
+
+    max-width: 700px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    animation: ultimateAppear 2s ease;
+}
+
+
+/* ========================= */
+/* FINAL PHOTO */
+/* ========================= */
+
+.ultimate-photo-frame {
+    width: min(420px, 70vw);
+
+    height: min(520px, 65vh);
+
+    background: white;
+
+    padding: 12px;
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.18);
+
+    margin-bottom: 40px;
+
+    transform: rotate(-2deg);
+
+    transition: transform 0.5s ease;
+}
+
+
+.ultimate-photo-frame:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+
+/* ========================= */
+/* PHOTO PLACEHOLDER */
+/* ========================= */
+
+.ultimate-photo-placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: #ead8d0;
+
+    color: #8b5e58;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+}
+
+
+/* ========================= */
+/* LOVE MESSAGE */
+/* ========================= */
+
+.ultimate-final-content h1 {
+    font-family:
+        "Segoe Script",
+        "Brush Script MT",
+        cursive;
+
+    font-size: clamp(28px, 4vw, 48px);
+
+    font-weight: normal;
+
+    color: #6d3f46;
+
+    line-height: 1.4;
+
+    margin: 0 0 22px;
+}
+
+
+/* ========================= */
+/* FINAL CREDIT */
+/* ========================= */
+
+.final-credit {
+    font-family:
+        "Segoe Script",
+        "Brush Script MT",
+        cursive;
+
+    font-size: 17px;
+
+    color: #8b5e58;
+
+    margin: 0;
+
+    opacity: 0.85;
+}
+
+
+/* ========================= */
+/* FINAL ANIMATION */
+/* ========================= */
+
+@keyframes ultimateAppear {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    #ultimate-final-screen {
+        min-height: 100vh;
+
+        height: 100vh;
+
+        padding: 25px;
+    }
+
+
+    .ultimate-photo-frame {
+        width: 75vw;
+
+        height: 55vh;
+
+        max-height: 500px;
+
+        margin-bottom: 30px;
+    }
+
+
+    .ultimate-final-content h1 {
+        font-size: 30px;
+    }
+
+
+    .final-credit {
+        font-size: 15px;
+    }
+
+}
+/* ========================= */
+/* FINISH STORY BUTTON */
+/* ========================= */
+
+#finish-story-button {
+    display: block;
+
+    margin: 45px auto 20px;
+
+    padding: 14px 28px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #8b5e58;
+
+    color: white;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+#finish-story-button:hover {
+    transform: scale(1.08);
+}
+.photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}.birthday-photo {
+    overflow: hidden;
+}
+
+.birthday-photo img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.memories-photos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    width: 90%;
+    max-width: 700px;
+
+    margin: 30px auto;
+}
+
+.memory-photo {
+    width: 100%;
+    height: 220px;
+
+    overflow: hidden;
+
+    background: white;
+    padding: 8px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.memory-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+@media (max-width: 600px) {
+
+    .memories-photos {
+        grid-template-columns: 1fr;
+        width: 85%;
+    }
+
+    .memory-photo {
+        height: 250px;
+    }
+
+}
+.love-photo {
+    overflow: hidden;
+}
+
+.love-photo img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.future-photo {
+    overflow: hidden;
+}
+
+.future-photo img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.letter-photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
